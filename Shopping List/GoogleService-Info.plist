@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>231098772734-dfjpiivfkkn3kaesthsj6km0i60hqko5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.231098772734-dfjpiivfkkn3kaesthsj6km0i60hqko5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAgLHB8llRlysbCy8sIgWO8T-g937FJ_eM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>231098772734</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gundarskokins.Shopping-List</string>
+	<key>PROJECT_ID</key>
+	<string>shopping-list-6172f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>shopping-list-6172f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:231098772734:ios:6588c66fe8bf45b2a589af</string>
+	<key>DATABASE_URL</key>
+	<string>https://shopping-list-6172f-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>
