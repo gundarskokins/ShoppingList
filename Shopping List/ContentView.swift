@@ -8,9 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var database: RealtimeDatabase
+    @State private var showingSheet = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(database.shoppingItems) { item in
+                CheckView(isChecked: item.checked, title: item.name, shoppingItem: item)
+            }
+            .navigationTitle("Shopping List")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showingSheet = true
+                    } label: {
+                        Image(systemName: "plus.circle")
+                    }
+                    .sheet(isPresented: $showingSheet) {
+                        ItemView()
+                    }
+                }
+            }
+            
+        }
     }
 }
 
