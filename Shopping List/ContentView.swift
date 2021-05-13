@@ -13,8 +13,11 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(database.shoppingItems) { item in
-                CheckView(isChecked: item.checked, title: item.name, shoppingItem: item)
+            List {
+                ForEach(database.shoppingItems) { item in
+                    CheckView(isChecked: item.checked, title: item.name, shoppingItem: item)
+                }
+                .onDelete(perform: deleteItem)
             }
             .navigationTitle("Shopping List")
             .toolbar {
@@ -28,8 +31,19 @@ struct ContentView: View {
                         ItemView()
                     }
                 }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
             }
-            
+        }
+    }
+    
+    func deleteItem(at offsets: IndexSet) {
+        let itemsToDelete = offsets.map { database.shoppingItems[$0] }
+        database.shoppingItems.remove(atOffsets: offsets)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            itemsToDelete.forEach { $0.ref?.removeValue() }
         }
     }
 }
