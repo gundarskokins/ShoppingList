@@ -9,7 +9,17 @@ import Foundation
 import Firebase
 
 class RealtimeDatabase: ObservableObject {
-    @Published var shoppingItems: [ShoppingItem] = []
+    @Published var shoppingItems: [ShoppingItem] = [] {
+        didSet {
+            shoppingItems.forEach {
+                if !baskets.contains($0.basket) {
+                    baskets.append($0.basket)
+                }
+            }
+        }
+    }
+    @Published var baskets: [String] = ["Default"]
+    
     
     var ref: DatabaseReference
 
@@ -32,5 +42,15 @@ class RealtimeDatabase: ObservableObject {
             
             self.shoppingItems = newItems
         })
+    }
+    
+    func saveItem(with name: String, in basket: String) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            let itemRef = self?.ref.child(name.lowercased())
+            let shoppingItem = ShoppingItem(name: name,
+                                            completed: false,
+                                            basket: basket)
+            itemRef?.setValue(shoppingItem.toAnyObject())
+        }
     }
 }

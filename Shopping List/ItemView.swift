@@ -11,12 +11,38 @@ import Firebase
 struct ItemView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var database: RealtimeDatabase
-    @State private var name = ""
     
+    @State private var name = ""
+    @State private var isSaveDisabled = true
+    @State private var basketSelection = 0
+    @State private var showingSheet = false
+    @State private var basketName = ""
+    @State var allBaskets: [String] = []
+
     var body: some View {
         NavigationView {
             Form {
-                TextField("Item name", text: $name)
+                Section(header: Text("Select basket")) {
+                    Picker("Selection", selection: $basketSelection) {
+                        ForEach(0..<allBaskets.count, id: \.self) {
+                            Text(allBaskets[$0])
+                        }
+                    }
+                    Button("Add basket") {
+                        showingSheet = true
+                    }
+                    .sheet(isPresented: $showingSheet) {
+                        BasketView(allBaskets: $allBaskets)
+                }
+                
+                }
+                
+                Section(header: Text("Enter item name")) {
+                    TextField("Item name", text: $name)
+                        .onChange(of: name, perform: { value in
+                            isSaveDisabled = !(value.count > 0)
+                        })
+                }
             }
             .navigationBarTitle("Add item", displayMode: .inline)
             .navigationBarItems(leading:
@@ -28,18 +54,14 @@ struct ItemView: View {
                                 trailing:
                                     Button("Save", action: {
                                         presentationMode.wrappedValue.dismiss()
-                                        saveItem()
+                                        database.saveItem(with: name, in: allBaskets[basketSelection])
                                     })
+                                    .disabled(isSaveDisabled)
             )
+
         }
-    }
-    
-    func saveItem() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            let itemRef = database.ref.child(name.lowercased())
-            let shoppingItem = ShoppingItem(name: name,
-                                            completed: false)
-            itemRef.setValue(shoppingItem.toAnyObject())
+        .onAppear {
+            allBaskets = database.baskets
         }
     }
 }
