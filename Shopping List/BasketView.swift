@@ -33,12 +33,22 @@ struct BasketView: View {
                     
                     Button("Done", action: {
                         presentationMode.wrappedValue.dismiss()
-                        allBaskets.append(name)
+                        addBasket()
                     })
                     .disabled(isSaveDisabled)
                 }
             }
             .padding()
+        }
+    }
+    
+    func addBasket() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            guard !allBaskets.contains(name) else { return }
+            
+            let basketRef = database.ref.child(name.lowercased())
+            let basketName: Any = ["basketName": name]
+            basketRef.setValue(basketName)
         }
     }
 }

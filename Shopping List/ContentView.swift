@@ -10,16 +10,22 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var database: RealtimeDatabase
     @State private var showingSheet = false
+    @State private var basketName = "All items"
+    @State private var text = ""
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(database.shoppingItems) { item in
-                    CheckView(isChecked: item.checked, title: item.name, shoppingItem: item)
+            VStack {
+                DropdownPicker(title: "Select basket", selection: $basketName, options: database.baskets.map { $0.name })
+                List {
+                    ForEach(database.activeShoppingBasket) { item in
+                        CheckView(isChecked: item.checked, title: item.name, shoppingItem: item)
+                    }
+                    .onDelete(perform: database.deleteItem)
                 }
-                .onDelete(perform: deleteItem)
+                .listStyle(PlainListStyle())
             }
-            .navigationTitle("Shopping List")
+            .navigationBarTitle("Shopping List")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
@@ -29,6 +35,7 @@ struct ContentView: View {
                     }
                     .sheet(isPresented: $showingSheet) {
                         ItemView()
+                            .environmentObject(database)
                     }
                 }
                 
@@ -37,13 +44,8 @@ struct ContentView: View {
                 }
             }
         }
-    }
-    
-    func deleteItem(at offsets: IndexSet) {
-        let itemsToDelete = offsets.map { database.shoppingItems[$0] }
-        database.shoppingItems.remove(atOffsets: offsets)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            itemsToDelete.forEach { $0.ref?.removeValue() }
+        .onAppear {
+            database.populateActiveShoppingList(with: basketName)
         }
     }
 }

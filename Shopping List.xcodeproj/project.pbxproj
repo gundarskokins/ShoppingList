@@ -21,6 +21,8 @@
 		7C678F03264C720D004CEF4F /* RealtimeDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C678F02264C720D004CEF4F /* RealtimeDatabase.swift */; };
 		7C678F11264C7454004CEF4F /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C678F10264C7454004CEF4F /* CheckView.swift */; };
 		7C678F30264EA768004CEF4F /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C678F2F264EA768004CEF4F /* BasketView.swift */; };
+		7C678F3A265182B9004CEF4F /* DropdownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C678F39265182B9004CEF4F /* DropdownPicker.swift */; };
+		7C678F3F26519A05004CEF4F /* BasketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C678F3E26519A05004CEF4F /* BasketModel.swift */; };
 		F08917703773A7E8CE779B5F /* Pods_Shopping_List_Shopping_ListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ED59F4AEFA031BF5642E9B /* Pods_Shopping_List_Shopping_ListUITests.framework */; };
 		F14C54E323B9DBE6D1F6B4A4 /* Pods_Shopping_ListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 862B0F5F98E02067D0BA521A /* Pods_Shopping_ListTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,8 @@
 		7C678F02264C720D004CEF4F /* RealtimeDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeDatabase.swift; sourceTree = "<group>"; };
 		7C678F10264C7454004CEF4F /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
 		7C678F2F264EA768004CEF4F /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		7C678F39265182B9004CEF4F /* DropdownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPicker.swift; sourceTree = "<group>"; };
+		7C678F3E26519A05004CEF4F /* BasketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketModel.swift; sourceTree = "<group>"; };
 		862B0F5F98E02067D0BA521A /* Pods_Shopping_ListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shopping_ListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C592D0E4219337303F456C9 /* Pods-Shopping ListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopping ListTests.debug.xcconfig"; path = "Target Support Files/Pods-Shopping ListTests/Pods-Shopping ListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7CC4930DC42C41554914EA4 /* Pods-Shopping List-Shopping ListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopping List-Shopping ListUITests.debug.xcconfig"; path = "Target Support Files/Pods-Shopping List-Shopping ListUITests/Pods-Shopping List-Shopping ListUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 				7C678EEF264C25B6004CEF4F /* Model */,
 				7C678E412649CB77004CEF4F /* ShoppingListApp.swift */,
 				7C678E432649CB77004CEF4F /* ContentView.swift */,
+				7C678F39265182B9004CEF4F /* DropdownPicker.swift */,
 				7C678F10264C7454004CEF4F /* CheckView.swift */,
 				7C678EDD264B2723004CEF4F /* ItemView.swift */,
 				7C678F2F264EA768004CEF4F /* BasketView.swift */,
@@ -169,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				7C678EF0264C25CA004CEF4F /* ShoppingItem.swift */,
+				7C678F3E26519A05004CEF4F /* BasketModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -457,8 +463,10 @@
 				7C678EB8264A6923004CEF4F /* AppDelegate.swift in Sources */,
 				7C678E442649CB77004CEF4F /* ContentView.swift in Sources */,
 				7C678E422649CB77004CEF4F /* ShoppingListApp.swift in Sources */,
+				7C678F3A265182B9004CEF4F /* DropdownPicker.swift in Sources */,
 				7C678EF1264C25CA004CEF4F /* ShoppingItem.swift in Sources */,
 				7C678EDE264B2723004CEF4F /* ItemView.swift in Sources */,
+				7C678F3F26519A05004CEF4F /* BasketModel.swift in Sources */,
 				7C678F03264C720D004CEF4F /* RealtimeDatabase.swift in Sources */,
 				7C678F11264C7454004CEF4F /* CheckView.swift in Sources */,
 			);

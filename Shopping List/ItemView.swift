@@ -18,14 +18,17 @@ struct ItemView: View {
     @State private var showingSheet = false
     @State private var basketName = ""
     @State var allBaskets: [String] = []
+    
 
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("Select basket")) {
                     Picker("Selection", selection: $basketSelection) {
-                        ForEach(0..<allBaskets.count, id: \.self) {
-                            Text(allBaskets[$0])
+                        
+                        ForEach(0..<database.baskets.count, id: \.self) {
+                            let basketNames = database.baskets.map { $0.name }
+                            Text(basketNames[$0])
                         }
                     }
                     Button("Add basket") {
@@ -33,6 +36,7 @@ struct ItemView: View {
                     }
                     .sheet(isPresented: $showingSheet) {
                         BasketView(allBaskets: $allBaskets)
+                            .environmentObject(database)
                 }
                 
                 }
@@ -61,7 +65,7 @@ struct ItemView: View {
 
         }
         .onAppear {
-            allBaskets = database.baskets
+            allBaskets = database.baskets.map { $0.name }
         }
     }
 }
