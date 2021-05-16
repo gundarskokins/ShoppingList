@@ -13,7 +13,6 @@
 		7C678E462649CB7E004CEF4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C678E452649CB7E004CEF4F /* Assets.xcassets */; };
 		7C678E492649CB7E004CEF4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C678E482649CB7E004CEF4F /* Preview Assets.xcassets */; };
 		7C678E542649CB7E004CEF4F /* Shopping_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C678E532649CB7E004CEF4F /* Shopping_ListTests.swift */; };
-		7C678E5F2649CB7E004CEF4F /* Shopping_ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C678E5E2649CB7E004CEF4F /* Shopping_ListUITests.swift */; };
 		7C678EB8264A6923004CEF4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C678EB7264A6923004CEF4F /* AppDelegate.swift */; };
 		7C678ED7264B0A3D004CEF4F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C678ED6264B0A3D004CEF4F /* GoogleService-Info.plist */; };
 		7C678EDE264B2723004CEF4F /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C678EDD264B2723004CEF4F /* ItemView.swift */; };
@@ -23,19 +22,11 @@
 		7C678F30264EA768004CEF4F /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C678F2F264EA768004CEF4F /* BasketView.swift */; };
 		7C678F3A265182B9004CEF4F /* DropdownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C678F39265182B9004CEF4F /* DropdownPicker.swift */; };
 		7C678F3F26519A05004CEF4F /* BasketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C678F3E26519A05004CEF4F /* BasketModel.swift */; };
-		F08917703773A7E8CE779B5F /* Pods_Shopping_List_Shopping_ListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6ED59F4AEFA031BF5642E9B /* Pods_Shopping_List_Shopping_ListUITests.framework */; };
 		F14C54E323B9DBE6D1F6B4A4 /* Pods_Shopping_ListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 862B0F5F98E02067D0BA521A /* Pods_Shopping_ListTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		7C678E502649CB7E004CEF4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C678E362649CB77004CEF4F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7C678E3D2649CB77004CEF4F;
-			remoteInfo = "Shopping List";
-		};
-		7C678E5B2649CB7E004CEF4F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7C678E362649CB77004CEF4F /* Project object */;
 			proxyType = 1;
@@ -56,7 +47,6 @@
 		7C678E4F2649CB7E004CEF4F /* Shopping ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shopping ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C678E532649CB7E004CEF4F /* Shopping_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping_ListTests.swift; sourceTree = "<group>"; };
 		7C678E552649CB7E004CEF4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C678E5A2649CB7E004CEF4F /* Shopping ListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shopping ListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C678E5E2649CB7E004CEF4F /* Shopping_ListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping_ListUITests.swift; sourceTree = "<group>"; };
 		7C678E602649CB7E004CEF4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C678EB7264A6923004CEF4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,14 +84,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7C678E572649CB7E004CEF4F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F08917703773A7E8CE779B5F /* Pods_Shopping_List_Shopping_ListUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -122,7 +104,6 @@
 			children = (
 				7C678E3E2649CB77004CEF4F /* Shopping List.app */,
 				7C678E4F2649CB7E004CEF4F /* Shopping ListTests.xctest */,
-				7C678E5A2649CB7E004CEF4F /* Shopping ListUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -270,26 +251,6 @@
 			productReference = 7C678E4F2649CB7E004CEF4F /* Shopping ListTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7C678E592649CB7E004CEF4F /* Shopping ListUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7C678E692649CB7E004CEF4F /* Build configuration list for PBXNativeTarget "Shopping ListUITests" */;
-			buildPhases = (
-				2CA6E4883E435445970E18A0 /* [CP] Check Pods Manifest.lock */,
-				7C678E562649CB7E004CEF4F /* Sources */,
-				7C678E572649CB7E004CEF4F /* Frameworks */,
-				7C678E582649CB7E004CEF4F /* Resources */,
-				5285BCF6BFE9EFD1ADDC2BC5 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7C678E5C2649CB7E004CEF4F /* PBXTargetDependency */,
-			);
-			name = "Shopping ListUITests";
-			productName = "Shopping ListUITests";
-			productReference = 7C678E5A2649CB7E004CEF4F /* Shopping ListUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -303,10 +264,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					7C678E4E2649CB7E004CEF4F = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 7C678E3D2649CB77004CEF4F;
-					};
-					7C678E592649CB7E004CEF4F = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 7C678E3D2649CB77004CEF4F;
 					};
@@ -327,7 +284,6 @@
 			targets = (
 				7C678E3D2649CB77004CEF4F /* Shopping List */,
 				7C678E4E2649CB7E004CEF4F /* Shopping ListTests */,
-				7C678E592649CB7E004CEF4F /* Shopping ListUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -350,38 +306,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7C678E582649CB7E004CEF4F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2CA6E4883E435445970E18A0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Shopping List-Shopping ListUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3A403A8D9B229C2CA9A17DB9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,23 +329,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5285BCF6BFE9EFD1ADDC2BC5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Shopping List-Shopping ListUITests/Pods-Shopping List-Shopping ListUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Shopping List-Shopping ListUITests/Pods-Shopping List-Shopping ListUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shopping List-Shopping ListUITests/Pods-Shopping List-Shopping ListUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		93CB0C097C93329483AB8FAF /* [CP] Embed Pods Frameworks */ = {
@@ -488,14 +398,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7C678E562649CB7E004CEF4F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C678E5F2649CB7E004CEF4F /* Shopping_ListUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -503,11 +405,6 @@
 			isa = PBXTargetDependency;
 			target = 7C678E3D2649CB77004CEF4F /* Shopping List */;
 			targetProxy = 7C678E502649CB7E004CEF4F /* PBXContainerItemProxy */;
-		};
-		7C678E5C2649CB7E004CEF4F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7C678E3D2649CB77004CEF4F /* Shopping List */;
-			targetProxy = 7C678E5B2649CB7E004CEF4F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -718,46 +615,6 @@
 			};
 			name = Release;
 		};
-		7C678E6A2649CB7E004CEF4F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7CC4930DC42C41554914EA4 /* Pods-Shopping List-Shopping ListUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Shopping ListUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gundarskokins.Shopping-ListUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Shopping List";
-			};
-			name = Debug;
-		};
-		7C678E6B2649CB7E004CEF4F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 731AAF0DA95685C5C21FD8C6 /* Pods-Shopping List-Shopping ListUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Shopping ListUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gundarskokins.Shopping-ListUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Shopping List";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -784,15 +641,6 @@
 			buildConfigurations = (
 				7C678E672649CB7E004CEF4F /* Debug */,
 				7C678E682649CB7E004CEF4F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7C678E692649CB7E004CEF4F /* Build configuration list for PBXNativeTarget "Shopping ListUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7C678E6A2649CB7E004CEF4F /* Debug */,
-				7C678E6B2649CB7E004CEF4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
