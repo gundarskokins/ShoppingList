@@ -47,8 +47,6 @@
 		7C678E4F2649CB7E004CEF4F /* Shopping ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shopping ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C678E532649CB7E004CEF4F /* Shopping_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping_ListTests.swift; sourceTree = "<group>"; };
 		7C678E552649CB7E004CEF4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C678E5E2649CB7E004CEF4F /* Shopping_ListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping_ListUITests.swift; sourceTree = "<group>"; };
-		7C678E602649CB7E004CEF4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C678EB7264A6923004CEF4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C678ED6264B0A3D004CEF4F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7C678EDD264B2723004CEF4F /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 			children = (
 				7C678E402649CB77004CEF4F /* Shopping List */,
 				7C678E522649CB7E004CEF4F /* Shopping ListTests */,
-				7C678E5D2649CB7E004CEF4F /* Shopping ListUITests */,
 				7C678E3F2649CB77004CEF4F /* Products */,
 				DEB546458289CC1CFBB318D2 /* Pods */,
 				F8ECD8BC510D005E2742FE26 /* Frameworks */,
@@ -136,15 +133,6 @@
 				7C678E552649CB7E004CEF4F /* Info.plist */,
 			);
 			path = "Shopping ListTests";
-			sourceTree = "<group>";
-		};
-		7C678E5D2649CB7E004CEF4F /* Shopping ListUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7C678E5E2649CB7E004CEF4F /* Shopping_ListUITests.swift */,
-				7C678E602649CB7E004CEF4F /* Info.plist */,
-			);
-			path = "Shopping ListUITests";
 			sourceTree = "<group>";
 		};
 		7C678EEF264C25B6004CEF4F /* Model */ = {
