@@ -130,15 +130,11 @@
 		7C678E402649CB77004CEF4F /* Shopping List */ = {
 			isa = PBXGroup;
 			children = (
+				7C678F462651A31F004CEF4F /* Views */,
 				7C678F01264C71EB004CEF4F /* SupportingFiles */,
 				7C678EFD264C5F20004CEF4F /* Utilities */,
 				7C678EEF264C25B6004CEF4F /* Model */,
 				7C678E412649CB77004CEF4F /* ShoppingListApp.swift */,
-				7C678E432649CB77004CEF4F /* ContentView.swift */,
-				7C678F39265182B9004CEF4F /* DropdownPicker.swift */,
-				7C678F10264C7454004CEF4F /* CheckView.swift */,
-				7C678EDD264B2723004CEF4F /* ItemView.swift */,
-				7C678F2F264EA768004CEF4F /* BasketView.swift */,
 				7C678E472649CB7E004CEF4F /* Preview Content */,
 			);
 			path = "Shopping List";
@@ -196,6 +192,18 @@
 				7C678E452649CB7E004CEF4F /* Assets.xcassets */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		7C678F462651A31F004CEF4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7C678E432649CB77004CEF4F /* ContentView.swift */,
+				7C678F39265182B9004CEF4F /* DropdownPicker.swift */,
+				7C678F10264C7454004CEF4F /* CheckView.swift */,
+				7C678EDD264B2723004CEF4F /* ItemView.swift */,
+				7C678F2F264EA768004CEF4F /* BasketView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DEB546458289CC1CFBB318D2 /* Pods */ = {
@@ -628,6 +636,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Shopping List/Preview Content\"";
+				DEVELOPMENT_TEAM = 86T3GM4BW6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Shopping List/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -650,6 +659,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Shopping List/Preview Content\"";
+				DEVELOPMENT_TEAM = 86T3GM4BW6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Shopping List/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

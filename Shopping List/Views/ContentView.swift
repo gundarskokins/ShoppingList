@@ -11,7 +11,6 @@ struct ContentView: View {
     @EnvironmentObject var database: RealtimeDatabase
     @State private var showingSheet = false
     @State private var basketName = "All items"
-    @State private var text = ""
     
     var body: some View {
         NavigationView {
@@ -44,9 +43,9 @@ struct ContentView: View {
                 }
             }
         }
-        .onAppear {
+        .onChange(of: basketName, perform: { value in
             database.populateActiveShoppingList(with: basketName)
-        }
+        })
     }
 }
 

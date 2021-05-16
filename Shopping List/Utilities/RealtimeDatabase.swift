@@ -12,6 +12,7 @@ class RealtimeDatabase: ObservableObject {
     @Published var allShoppingItems: [ShoppingItem] = []
     @Published var baskets: [Basket] = []
     @Published var activeShoppingBasket: [ShoppingItem] = []
+    @Published var selectedBasket = "All items"
     
     var ref: DatabaseReference
 
@@ -47,10 +48,14 @@ class RealtimeDatabase: ObservableObject {
 
             self.baskets = newBaskets
             self.allShoppingItems = newItems
+            
+            self.populateActiveShoppingList(with: self.selectedBasket)
         })
     }
     
     func populateActiveShoppingList(with name: String) {
+        selectedBasket = name
+        
         switch name {
             case "All items":
                 activeShoppingBasket = allShoppingItems
@@ -62,7 +67,7 @@ class RealtimeDatabase: ObservableObject {
     }
     
     func saveItem(with name: String, in basket: String) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
             let path = "\(basket.lowercased())/items/\(name)"
             let itemRef = self?.ref.child(path)
             
@@ -78,6 +83,16 @@ class RealtimeDatabase: ObservableObject {
         self.allShoppingItems.remove(atOffsets: offsets)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             itemsToDelete.forEach { $0.ref?.removeValue() }
+        }
+    }
+    
+    func addBasket(with name: String) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            guard !self.baskets.map({ $0.name }).contains(name) else { return }
+            
+            let basketRef = self.ref.child(name.lowercased())
+            let basketName: Any = ["basketName": name]
+            basketRef.setValue(basketName)
         }
     }
 }

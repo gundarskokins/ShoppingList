@@ -17,8 +17,6 @@ struct ItemView: View {
     @State private var basketSelection = 0
     @State private var showingSheet = false
     @State private var basketName = ""
-    @State var allBaskets: [String] = []
-    
 
     var body: some View {
         NavigationView {
@@ -35,7 +33,7 @@ struct ItemView: View {
                         showingSheet = true
                     }
                     .sheet(isPresented: $showingSheet) {
-                        BasketView(allBaskets: $allBaskets)
+                        BasketView()
                             .environmentObject(database)
                 }
                 
@@ -58,14 +56,11 @@ struct ItemView: View {
                                 trailing:
                                     Button("Save", action: {
                                         presentationMode.wrappedValue.dismiss()
-                                        database.saveItem(with: name, in: allBaskets[basketSelection])
+                                        database.saveItem(with: name, in: database.baskets.map({ $0.name })[basketSelection])
                                     })
                                     .disabled(isSaveDisabled)
             )
 
-        }
-        .onAppear {
-            allBaskets = database.baskets.map { $0.name }
         }
     }
 }
