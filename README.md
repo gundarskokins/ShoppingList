@@ -24,3 +24,4 @@ There are three views in application:
 
 - Add basket deletion logic
 - Add image adding logic to the application and online storage handling
+- Offline handling
