@@ -15,9 +15,13 @@ class RealtimeDatabase: ObservableObject {
     @Published var selectedBasket = "All items"
     
     var ref: DatabaseReference
+    var url: String
+    var path: String
 
-    init() {
-        ref = Database.database(url: "https://shopping-list-6172f-default-rtdb.europe-west1.firebasedatabase.app/").reference(withPath: "shopping-list/baskets")
+    init(url: String, path: String) {
+        self.url = url
+        self.path = path
+        self.ref = Database.database(url: url).reference(withPath: path)
         
         populateItems()
     }
