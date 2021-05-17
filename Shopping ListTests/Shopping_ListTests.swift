@@ -92,9 +92,9 @@ class Shopping_ListTests: XCTestCase {
     func testAddBasket() {
         let expectation = XCTestExpectation(description: "Wait for added baskets")
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            XCTAssert(self.database!.baskets.isEmpty)
+        XCTAssert(self.database!.baskets.isEmpty)
 
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.database?.addBasket(with: "test basket 1")
             self.database?.addBasket(with: "test basket 2")
             self.database?.addBasket(with: "test basket 3")
