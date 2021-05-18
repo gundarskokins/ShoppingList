@@ -2,7 +2,7 @@
 
 ShoppinList is application written in Swift and SwiftUI which purpouse is to store and delete items using Firebase platform.
 
-## Instalation
+## Installation
 
 To install required dependencies use `pod install` command in your terminal.
 To find more information about cocoapods and how to install use [click here](https://cocoapods.org/)
